@@ -1,0 +1,82 @@
+body{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #083c54ee;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1 {
+    color: rgb(255, 255, 255);
+    margin-top: 40px;
+    font-size: 3em;
+}
+#myBtn {
+    font-size: 3em;
+    padding: 5px 25px;
+    border-radius: 35px;
+    border: none;
+    position: absolute;
+    top: 60%;
+    cursor: pointer;
+}
+.roulette {
+    width: 60%;
+    height: 80px;
+    overflow: hidden;
+    position: relative;
+    font-size: 3em;
+    color: white;
+    margin-top: 20vh;
+
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 20%,
+        black 80%,
+        transparent
+    );
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 20%,
+        black 80%,
+        transparent
+    );
+}
+.arrow {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid white;
+    z-index: 10;
+    pointer-events: none;
+    margin-bottom: -10px;
+}
+
+
+.track {
+    display: flex;
+    width: max-content;
+    transform: translateX(0);
+    will-change: transform;
+    backface-visibility: visible;
+}
+
+.number {
+    min-width: 60px;
+    text-align: center;
+    margin: 0 5px;
+}
+@media (max-width:765px) {
+    .roulette {
+        width: 80%;
+    }
+}
