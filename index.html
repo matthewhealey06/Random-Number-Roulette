@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Random Number Roulette</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h1>RANDOM NUMBER GENERATOR</h1> <br>
+    <h1>RANDOM NUMBER ROULETTE</h1> <br>
     <div class="roulette">
         <div class="mask">
             <div class="track" id="track"></div>
         </div>
         <div class="arrow"></div>
     </div>
+
+    <div class="controls">
+        <input type="text" id="minInput" placeholder="Min" value="1" inputmode="numeric" maxlength="3">
+        <input type="text" id="maxInput" placeholder="Max" value="60" inputmode="numeric" maxlength="3">    
+    </div>    
 
     <button id="myBtn">RNG</button>
 

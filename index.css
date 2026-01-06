@@ -71,12 +71,27 @@ h1 {
 }
 
 .number {
-    min-width: 60px;
+    width: 75px;        /* Fixed width — wide enough for 4-5 digits */
+    min-width: unset;   /* Remove min-width */
+    flex-shrink: 0;     /* Prevent shrinking */
     text-align: center;
     margin: 0 5px;
+    font-feature-settings: "tnum"; /* Optional: tabular numerals for equal spacing if font supports */
 }
 @media (max-width:765px) {
     .roulette {
         width: 80%;
     }
+}
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 75px;
+}
+
+.controls input {
+    font-size: 1.2em;
+    padding: 5px 10px;
+    width: 100px;
 }
